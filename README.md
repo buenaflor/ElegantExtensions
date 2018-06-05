@@ -32,6 +32,21 @@ pod 'ElegantExtensions'
 - [x] Alerts
 - [x] Attributed Strings
 
+## Usage
+
+### AutoLayout Constraints
+
+Using AutoLayout can be very tedious and tiring. The integrated and easy-to-use extensions can give you a helping hand in creating complicated layouts.
+
+#### Basic
+
+```swift
+// Constraints the subview to all anchors of the parent view
+view.fillToSuperView(tableView)
+```
+
+
+
 ## Author
 
 Giancarlo Buenaflor, giancarlo.buenaflor@yahoo.com
