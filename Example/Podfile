@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ElegantExtensions_Example' do
+  pod 'ElegantExtensions', :path => '../'
+
+  target 'ElegantExtensions_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
