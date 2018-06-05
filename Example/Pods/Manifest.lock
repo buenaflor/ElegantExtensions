@@ -1,0 +1,16 @@
+PODS:
+  - ElegantExtensions (0.1.0)
+
+DEPENDENCIES:
+  - ElegantExtensions (from `../`)
+
+EXTERNAL SOURCES:
+  ElegantExtensions:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ElegantExtensions: a9c35af97b2cfb3d6463b1610b58a417813048ae
+
+PODFILE CHECKSUM: 282828c233442d82aa430a75e38f6a209d184e97
+
+COCOAPODS: 1.5.3

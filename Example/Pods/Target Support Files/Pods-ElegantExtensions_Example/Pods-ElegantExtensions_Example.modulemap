@@ -1,0 +1,6 @@
+framework module Pods_ElegantExtensions_Example {
+  umbrella header "Pods-ElegantExtensions_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
