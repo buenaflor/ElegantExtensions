@@ -195,6 +195,63 @@ class CustomCellOne: UITableViewCell, Configurable {
 }
 ```
 
+### ViewController & Alerts
+
+#### Wrapped in NavigationController
+
+Easily wrap your ViewController in a NavigationController
+
+```swift
+let viewController = ViewController()
+present(viewController.wrapped(), animated: true, completion: nil)
+```
+
+#### TopViewController
+
+Returns the TopViewController 
+
+```swift
+class ResultsViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let topViewController = self.topViewController
+    }
+}
+
+```
+
+#### Alert With Handler
+
+Shows an alert with a completion handler. Set cancelable to false if you don't need a cancel button
+
+```swift
+       alert(title: "Title", message: "Message", cancelable: true) { (action) in
+            // Do something when OK clicked
+        }
+```
+
+#### Alert Error
+
+Shows an error alert in case you get one
+
+```swift
+       alert(error: err)
+```
+
+### NSAttributedString
+
+#### Creating A Custom String
+
+If you need a specific string to be of a specific font or color, you can use this
+
+```swift
+        let label = UILabel()
+        
+        let attributedString = NSAttributedString.String("My String", font: .boldSystemFont(ofSize: 20), color: .red)
+        label.attributedText = attributedString
+```
 
 ## Author
 
