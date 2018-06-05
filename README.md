@@ -23,6 +23,8 @@ it, simply add the following line to your Podfile:
 pod 'ElegantExtensions'
 ```
 
+Change the path in your terminal to the project folder and run `pod install` to install the dependency.
+
 ## Features
 
 - [x] Easy AutoLayout
