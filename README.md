@@ -227,9 +227,9 @@ class ResultsViewController: UIViewController {
 Shows an alert with a completion handler. Set cancelable to false if you don't need a cancel button
 
 ```swift
-       alert(title: "Title", message: "Message", cancelable: true) { (action) in
-            // Do something when OK clicked
-        }
+alert(title: "Title", message: "Message", cancelable: true) { (action) in
+     // Do something when OK clicked
+}
 ```
 
 #### Alert Error
@@ -247,10 +247,10 @@ Shows an error alert in case you get one
 If you need a specific string to be of a specific font or color, you can use this
 
 ```swift
-        let label = UILabel()
+let label = UILabel()
         
-        let attributedString = NSAttributedString.String("My String", font: .boldSystemFont(ofSize: 20), color: .red)
-        label.attributedText = attributedString
+let attributedString = NSAttributedString.String("My String", font: .boldSystemFont(ofSize: 20), color: .red)
+label.attributedText = attributedString
 ```
 
 ## Author
