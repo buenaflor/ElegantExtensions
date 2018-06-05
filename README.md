@@ -1,4 +1,4 @@
-![ElegantExtensions: Easy & Elegant Extensions for Swift](https://i.imgur.com/95jKT5h.png)
+![ElegantExtensions: Easy & Elegant Extensions for Swift](https://i.imgur.com/bqx55kA.png)
 
 [![Version](https://img.shields.io/cocoapods/v/ElegantExtensions.svg?style=flat)](https://cocoapods.org/pods/ElegantExtensions)
 [![License](https://img.shields.io/cocoapods/l/ElegantExtensions.svg?style=flat)](https://cocoapods.org/pods/ElegantExtensions)
@@ -237,7 +237,7 @@ alert(title: "Title", message: "Message", cancelable: true) { (action) in
 Shows an error alert in case you get one
 
 ```swift
-       alert(error: err)
+alert(error: err)
 ```
 
 ### NSAttributedString
