@@ -31,7 +31,7 @@ Make coding easier & more clear with ElegantExtensions. AutoLayout has never bee
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'ElegantExtensions/Classes/**/*'
+  s.source_files = '*.swift'
   
   # s.resource_bundles = {
   #   'ElegantExtensions' => ['ElegantExtensions/Assets/*.png']
