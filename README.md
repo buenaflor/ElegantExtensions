@@ -128,6 +128,74 @@ let buttonCenterXAnchorConstraint: NSLayoutConstraint?
     }
 ```
 
+#### Separator Line
+
+You can add a separator line to the bottom of any view you like
+
+```swift
+textField.addSeparatorLine(color: .lightGray)
+```
+
+### TableView & CollectionView
+
+Easily create custom cells that will benefit from the extensions.
+
+
+#### Register Custom Cells
+
+You can register any tableView or collectionView cell. You can interchange cells by changing the dataSource and using some conditioning with either Booleans or Enums
+
+```swift
+    lazy var tableView: UITableView = {
+        let tv = UITableView()
+        tv.delegate = self
+        tv.dataSource = self
+        tv.register(CustomCellOne.self)
+        tv.register(CustomCellTwo.self)
+        return tv
+    }()
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if cellOneActive {
+            let cell = tableView.dequeueReusableCell(CustomCell.self, for: indexPath)
+            let model = models[indexPath.row]
+            
+            cell.configureWithModel(model)
+            
+            return cell
+        }
+        else {
+            let cell = tableView.dequeueReusableCell(CustomCell.self, for: indexPath)
+            let model = models[indexPath.row]
+            
+            cell.configureWithModel(model)
+            
+            return cell
+        }
+    }       
+```
+
+#### Configurable
+
+For improved abstraction, your views can conform to the "Configurable" protocol. It is very useful combined with custom cells
+
+```swift
+class CustomCellOne: UITableViewCell, Configurable {
+    var model: String?
+    
+    let titleLabel = Label()
+    
+    func configureWithModel(_ title: String) {
+        self.model = title
+        
+        titleLabel.text = title
+    }
+    
+    // ... Layout views in initializer
+}
+```
+
+
 ## Author
 
 Giancarlo Buenaflor, giancarlo_buenaflor@yahoo.com
