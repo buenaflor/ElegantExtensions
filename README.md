@@ -86,9 +86,51 @@ view.add(subview: label) { (v, p) in [
             ]}
 ```
 
+#### Deactivating Constraints
+
+If you store the constraints outside of your AutoLayouting configurations, you can disable them anytime.
+
+```swift
+let buttonWidthConstraint: NSLayoutConstraint?
+let buttonHeightConstraint: NSLayoutConstraint?
+let buttonTopAnchorConstraint: NSLayoutConstraint?
+let buttonCenterXAnchorConstraint: NSLayoutConstraint?
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        buttonCenterXAnchorConstraint = button.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        buttonTopAnchorConstraint = button.topAnchor.constraint(equalTo: view.topAnchor)
+        buttonHeightConstraint = button.heightAnchor.constraint(equalToConstant: 80)
+        buttonWidthConstraint = button.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.3)
+        
+        guard 
+            let buttonWidthConstraint = buttonWidthConstraint,
+            let buttonHeightConstraint = buttonHeightConstraint,
+            let buttonCenterXAnchorConstraint = buttonCenterXAnchorConstraint,
+            let buttonTopAnchorConstraint = buttonTopAnchorConstraint
+            else { return }
+            
+        view.add(subview: button) { (v, p) in [
+            buttonCenterXAnchorConstraint,
+            buttonTopAnchorConstraint,
+            buttonHeightConstraint,
+            buttonWidthConstraint
+            ]}
+            
+        // Deactivate Constraints
+        view.deactivate(constraints: [
+            buttonCenterXAnchorConstraint,
+            buttonTopAnchorConstraint,
+            buttonHeightConstraint,
+            buttonWidthConstraint
+        ])
+    }
+```
+
 ## Author
 
-Giancarlo Buenaflor, giancarlo.buenaflor@yahoo.com
+Giancarlo Buenaflor, giancarlo_buenaflor@yahoo.com
 
 ## License
 
