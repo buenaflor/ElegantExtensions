@@ -1,4 +1,4 @@
-# ElegantExtensions
+![ElegantExtensions: Easy & Elegant Extensions for Swift](https://i.imgur.com/95jKT5h.png)
 
 [![Version](https://img.shields.io/cocoapods/v/ElegantExtensions.svg?style=flat)](https://cocoapods.org/pods/ElegantExtensions)
 [![License](https://img.shields.io/cocoapods/l/ElegantExtensions.svg?style=flat)](https://cocoapods.org/pods/ElegantExtensions)
